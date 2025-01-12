@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Panther</title>
+    <style>
+      /* General body styling */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      /* Container for the content */
+      .movie-section {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 50px;
+        color: white;
+      }
+
+      /* Video background styling */
+      .movie-section video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        filter: brightness(60%);
+      }
+
+      /* Content container */
+      .movie-content {
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+      }
+
+      /* Movie title */
+      .movie-content h1 {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      /* Movie metadata */
+      .movie-metadata {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .movie-metadata span {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      /* Movie description */
+      .movie-description {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      /* Watch now button */
+      .watch-now-btn {
+        background-color: #e50914;
+        color: white;
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        display: inline-block;
+        transition: background-color 0.3s;
+      }
+
+      .watch-now-btn:hover {
+        background-color: #f40612;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .movie-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .movie-description {
+          font-size: 1rem;
+        }
+
+        .watch-now-btn {
+          padding: 10px 30px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="movie-section">
+      <video autoplay loop muted>
+        <source src="https://firebasestorage.googleapis.com/v0/b/tryout-allinstudio.appspot.com/o/videos%2Fvideo.mp4?alt=media&token=2a40aba0-c1c1-44bf-846f-13cc41450a70" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="movie-content">
+        <h1>IMPIAN & PERGAULAN BEBAS BANDUNG GEN Z</h1>
+        <div class="movie-metadata">
+          <span>&#9733; 10</span>
+          <span>300 mins</span>
+          <span>HD+</span>
+          <span>18+</span>
+        </div>
+        <p class="movie-description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae saepe
+          dolore alias dignissimos neque aut nostrum aliquam officiis minus unde
+          suscipit.
+        </p>
+        <a href="watchnow.html" class="watch-now-btn">Watch Now</a>
+      </div>
+    </div>
+  </body>
+</html>

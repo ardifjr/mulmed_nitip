@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch Now - Black Panther</title>
+    <style>
+      /* Global styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #141414;
+        color: white;
+      }
+
+      /* Navbar styling */
+      .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: #141414;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .navbar img {
+        height: 40px;
+      }
+
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin-left: 20px;
+      }
+
+      .navbar a:hover {
+        text-decoration: underline;
+      }
+
+      /* Video Player Section */
+      .video-player-section {
+        position: relative;
+        height: 100vh;
+        background: black;
+      }
+
+      .video-player {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: url("https://www.example.com/black-panther-poster.jpg")
+          no-repeat center center;
+        background-size: cover;
+      }
+
+      .controls {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        z-index: 1;
+      }
+
+      .controls button {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .controls button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      .video-title {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 3rem;
+        font-weight: bold;
+        z-index: 1;
+      }
+
+      .video-description {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        font-size: 1.2rem;
+        max-width: 500px;
+        z-index: 1;
+      }
+
+      /* Next video button */
+      .next-video-btn {
+        background-color: #e50914;
+        color: white;
+        padding: 15px 40px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        display: none; /* Hidden by default */
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: background-color 0.3s;
+      }
+
+      .next-video-btn:hover {
+        background-color: #f40612;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .video-title {
+          font-size: 2rem;
+        }
+
+        .video-description {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <img src="img/logoN.jpg" alt="Netflix Logo" />
+      <div>
+        <a href="#">Home</a>
+        <a href="#">My List</a>
+        <a href="#">Sign Out</a>
+      </div>
+    </div>
+
+    <!-- Video Player Section -->
+    <div class="video-player-section">
+      <video class="video-player" id="videoPlayer" controls autoplay>
+        <source src="https://firebasestorage.googleapis.com/v0/b/tryout-allinstudio.appspot.com/o/videos%2F3.mp4?alt=media&token=45658a7f-5d39-4aa6-9694-aca263526aa6" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Next Video Button -->
+      <a href="next4.html" class="next-video-btn" id="nextVideoBtn"
+        >Next Video</a
+      >
+    </div>
+
+    <script>
+      // Access the video and the Next Video button
+      const video = document.getElementById("videoPlayer");
+      const nextVideoButton = document.getElementById("nextVideoBtn");
+
+      // Debugging logs
+      video.addEventListener("ended", function () {
+        console.log("Video has ended.");
+        nextVideoButton.style.display = "block"; // Show the next video button
+      });
+
+      // Check if the video element is available
+      if (!video) {
+        console.error("Video element not found.");
+      } else {
+        console.log("Video element found.");
+      }
+
+      // Optional: Check if the Next Video button is available
+      if (!nextVideoButton) {
+        console.error("Next video button not found.");
+      } else {
+        console.log("Next video button found.");
+      }
+    </script>
+  </body>
+</html>
